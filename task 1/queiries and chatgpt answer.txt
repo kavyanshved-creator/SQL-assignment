@@ -1,0 +1,78 @@
+Queries
+=======================================================
+CREATE TABLE playlists (
+    playlist_id INT AUTO_INCREMENT,
+    name VARCHAR(100),
+    created_by VARCHAR(100),
+    PRIMARY KEY (playlist_id)
+);
+--------------------------------------------------------
+INSERT INTO playlists ( name, created_by)
+VALUES
+( 'Bollywood Hits', 'Amit'),
+( 'Chill Vibes', 'Rahul'),
+( 'Workout Mix', 'Priya');
+===============================================
+INSERT INTO playlists ( name, created_by) VALUES ('Workout Mix', 'Amit'), ('Bollywood Hits', 'Rahul'), ('Chill Vibes', 'Priya');
+===============================================
+SELECT * 
+FROM playlists
+WHERE created_by = 'Amit';
+=================================================
+
+
+=================================================
+
+
+Difference Between Table, Row, and Column in SQL
+
+Consider a food delivery application like Zomato. Suppose we have a table called orders.
+
+Table
+
+A table is like a complete collection of related data.
+
+For example:
+
+orders table
+
+order_id	customer_name	restaurant	amount
+1	Amit	Domino's	500
+2	Rahul	McDonald's	350
+3	Priya	Subway	400
+
+The entire orders structure is called a table.
+
+Row
+
+A row represents one complete record in a table.
+
+For example:
+
+order_id	customer_name	restaurant	amount
+1	Amit	Domino's	500
+
+This single horizontal record is one row.
+
+In a Zomato-like app, one row can represent one customer's food order.
+
+Column
+
+A column represents one type of information stored for every record.
+
+Examples:
+
+order_id
+customer_name
+restaurant
+amount
+
+For example, the customer_name column stores the names of all customers.
+
+Simple Analogy
+SQL Concept	Zomato Example
+Table	Complete list of food orders
+Row	One customer's order
+Column	One type of information, such as customer name
+
+In short: A table contains rows and columns. Rows represent individual records, while columns represent different attributes or pieces of information about those records.
